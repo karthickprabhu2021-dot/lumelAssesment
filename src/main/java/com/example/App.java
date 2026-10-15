@@ -17,7 +17,7 @@ public class App {
         String listcontent = "//ul[@class='todo-list']//li[1]";
         String removeButton = "//button[@class='destroy']";
         String footerItem = "footerItem";
-        // String count;
+        String count;
 
         Playwright playwright = Playwright.create();
         Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
