@@ -18,7 +18,7 @@ public class App {
         String removeButton = "//button[@class='destroy']";
         String footerItem = "footerItem";
         String count;
-
+        
         Playwright playwright = Playwright.create();
         Browser browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
@@ -84,11 +84,11 @@ public class App {
         page.getByText("All").click();
 
          count= page.locator("footerItem").textContent();
-         Assert.assertEqauls(count,"0");A
+         Assert.assertEqauls(count,"0");
 
          Completedtab:
 
-        page.getByText("All").click();
+        page.getByText("Completed").click();
 
          count= page.locator("footerItem").textContent();
          Assert.assertEqauls(count,"0");
